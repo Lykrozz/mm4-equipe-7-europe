@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>EE2019. Trouvez le candidat qui vous ressemble le plus</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+    <!-- Responsive CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+</head>
+<body>
+<div id="preloader">
+    <div class="colorlib-load"></div>
+</div>
+<div id="app">
+    <!--div id="preloader">
+        <div class="colorlib-load"></div>
+    </div-->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area animated header_full">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <!-- Menu Area Start -->
+                <div class="menu_area">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="index.html">EE2019.</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <!-- Menu Area -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<main>
+    <h1>{{titre}}</h1>
+    <div id="tinderContain">
+    <div id="idees">
+        <p>Leurs idées principales :</p>
+        <ul>
+            <li v-for="idee in parti[this.nombre-1].idees">{{idee}}</li>
+        </ul>
+    </div>
+    <div id="carte" :class="parti[this.nombre-1].couleur">
+        <p>{{parti[nombre-1].nomParti | capitalize}}</p>
+        <span class="line"></span>
+        <p>{{parti[nombre-1].candidat}}</p>
+    </div>
+        <div id="liste">
+            <p>Vous avez mis de côté :</p>
+            <ul>
+                <li v-for="entry in maListe">{{entry}}</li>
+            </ul>
+        </div>
+        <div id="infos" style="display: none">
+            <p>Venez voter les 25 et 26 mai !</p>
+            <a href="/ca/index.html#bureau_vote" target="_blank">Cherchez votre bureau de vote</a>
+            <a href="">Recommencer</a>
+        </div>
+    </div>
+    <p id="nombre">{{nombre}} / {{parti.length}}</p>
+    <section id="choices">
+        <img @click="popList(nombre)" id="del" src="img/delete.png" alt="delete">
+        <img @click="nextList" id="aj" src="img/check.png" alt="check">
+        <a href="#" id="continuer" @click="restart" class="masquer">Continuer</a>
+    </section>
+
+</main>
+    <!--p id="ajout">{{compteur[0].ajout}}</p-->
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-social-icon text-center section_padding_70 clearfix">
+        <!-- footer logo -->
+        <div class="footer-text">
+            <h2>EE2019.</h2>
+        </div>
+        <!-- social icon-->
+        <div class="footer-social-icon">
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        </div>
+        <div class="footer-menu">
+            <nav>
+                <ul>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Foooter Text-->
+        <div class="copyright-text">
+            <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
+            <p>Copyright ©2019 EE2019.</p>
+        </div>
+    </footer>
+    <!-- ***** Footer Area Start ***** -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/tinder.js"></script>
+<!-- Jquery-2.2.4 JS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<!-- Popper js -->
+<script src="js/popper.min.js"></script>
+<!-- Bootstrap-4 Beta JS -->
+<script src="js/bootstrap.min.js"></script>
+<!-- All Plugins JS -->
+<script src="js/plugins.js"></script>
+<!-- Slick Slider Js-->
+<script src="js/slick.min.js"></script>
+<!-- Footer Reveal JS -->
+<!-- Active JS -->
+<script src="js/active.js"></script>
+
+</body>
+</html>

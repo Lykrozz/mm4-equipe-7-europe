@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>EE2019. Questionnaire</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+    <!-- Responsive CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+</head>
+<body>
+<div id="preloader">
+    <div class="colorlib-load"></div>
+</div>
+<div id="app">
+<!--div id="preloader">
+    <div class="colorlib-load"></div>
+</div-->
+
+<!-- ***** Header Area Start ***** -->
+<header class="header_area animated header_full">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <!-- Menu Area Start -->
+            <div class="menu_area">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="index.html">EE2019.</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <!-- Menu Area -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<h1>{{titre}}</h1>
+    <h2>{{sous_titre}}</h2>
+    <p id="etape">Etape {{numero}}</p>
+    <section id="etapes">
+        <div class="line_step line_step_active"></div>
+        <div id="etape2" class="line_step"></div>
+        <div id="etape3" class="line_step"></div>
+    </section>
+
+    <section id="conversation">
+        <div class="conv_left">
+            <img src="img/quentin.png" alt="">
+            <article>
+            <span>Quentin</span>
+            <p>Bonjour ! Je m’appelle Quentin et je suis là pour te parler des élections européennes qui ont lieu le week-end du 25 et 26 mai. Afin de faire un peu plus connaissance merci de compléter ton prénom, ton sexe et ton âge. </p>
+            </article>
+        </div>
+        <div id="answer_hole" class="answer_hole">
+            <form action="" method="post" id="formDatas" @submit.prevent="addUser" >
+            <p>Je m'appelle  <input type="text" placeholder="prénom" v-model="prenom" required>
+                <input type="text" v-model="nom" name="nom" placeholder="nom" required>, je suis
+                <select name="sexe" v-model="sexe" id="sexe" required>
+                    <option value="un homme" selected="selected">un homme</option>
+                    <option value="une femme">une femme</option>
+                </select>, et j'ai
+                <input type="number" min="10" max="120" value="30" v-model="age" required> ans.</p>
+            <input class="answerSubmit" type="submit">
+            </form>
+        </div>
+
+        <!--div class="answers" >
+            <a href="#" @click="create_conv_left('hello')">J'ai du mal à comprendre leurs idées et ce qu'elles impliquent.</a>
+            <a href="#" @click="create_conv_left2()">Je trouve qu'aller voter ne change pas les choses.</a>
+        </div-->
+        <!--div class="conv_right">
+            <p>Je m'appelle Jonathan Gosset, je suis un homme et j'ai 21 ans.</p>
+        </div-->
+        <chat-component v-for="cpt in chat" :type="cpt.type" :answers="cpt.answers" :content="cpt.content" :question="cpt.question" :photo="cpt.photo" :key="cpt.id"></chat-component>
+    </section>
+
+
+    <footer style="margin-top: 10rem;">
+        <p></p>
+    </footer>
+
+</div>
+<template id="chatComponent">
+    <div>
+        <div class="answers" v-if="type == 'quizz'"><a href="#" @click.prevent="chooseAnswer(answer)" v-for="answer in answers">{{answer}}</a></div>
+        <div class="conv_left" v-if="type == 'question'" :class="{last: !photo}">
+            <img src="img/quentin.png" alt="" v-if="photo == true">
+            <article>
+                <span>Quentin</span>
+            <p>{{content}}</p>
+            </article>
+        </div>
+        <div class="conv_right" v-if="type == 'answer'">
+            <p>{{content}}</p>
+        </div>
+        <div class="answer_hole" v-if="type == 'mail'">
+            <form action="" method="post" id="submitMail" @submit.prevent="sendData">
+                <p>Oui, mon email est <input class="mailSubmit" type="email" v-model="mail" required placeholder="votre@mail.com">.</p>
+                <input class="answerSubmit" type="submit" value="Suivant">
+            </form>
+        </div>
+        <div class="conv_right" v-if="type == 'convRight'">
+            <p>{{conv}}</p>
+        </div>
+    </div>
+</template>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/main.js"></script>
+<!-- Jquery-2.2.4 JS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<!-- Popper js -->
+<script src="js/popper.min.js"></script>
+<!-- Bootstrap-4 Beta JS -->
+<script src="js/bootstrap.min.js"></script>
+<!-- All Plugins JS -->
+<script src="js/plugins.js"></script>
+<!-- Slick Slider Js-->
+<script src="js/slick.min.js"></script>
+<!-- Footer Reveal JS -->
+<!-- Active JS -->
+<script src="js/active.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,366 @@
+
+    h1 {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        padding: 1.5em 1em 0.4em 1em;
+    }
+
+    h2 {
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #etapes{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        margin-top: 0.5em;
+        margin-bottom: 10px;
+    }
+    #etape{
+        margin-left: 5%;
+        color: #5b32b4;
+        margin-bottom: 0;
+        margin-top: 7px;
+    }
+.line_step{
+    background-color: #dcdcd6;
+    width: 32%;
+    height: 3px;
+}
+.line_step_active {
+    background-color: #F9397F;
+}
+.conv_left{
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+.conv_left img{
+    width: 4em;
+    height: 4em;
+    margin-right: 12px;
+}
+
+.conv_left p{
+    width: 70%;
+    background-color: #EFEFF1;
+    color: black;
+    border-radius: 7px;
+    padding: 12px;
+}
+.conv_left article{
+    width: 70%;
+}
+.conv_left article span{
+    color: #5b32b4;
+}
+.conv_right{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 13%;
+}
+.conv_right p{
+    text-align: right;
+    font-size: 16px;
+    background-image: linear-gradient(to right, #3E1CB7, #D061DC);
+    color: white;
+    border-radius: 7px;
+    padding: 10px 12px;
+    max-width: 70%;
+    width: fit-content;
+    margin-bottom: 0px;
+    margin-top: 50px;
+
+}
+.answers{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+    .answers a{
+        color: #3E1CB7;
+        border: #D061DC solid 1px;
+        border-radius: 7px;
+        padding: 6px;
+        margin-bottom: 6px;
+        padding-left: 1.3em;
+        padding-right: 1.3em;
+        width: fit-content;
+    }
+
+.answers a:hover{
+    color: white!important;
+    border: white solid 1px;
+    background-image: linear-gradient(to right, #3E1CB7, #D061DC);
+}
+#continuer{
+    color: #3E1CB7;
+    border: #D061DC solid 1px;
+    border-radius: 7px;
+    padding: 6px;
+    margin-bottom: 6px;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+    width: fit-content;
+}
+#continuer:hover{
+    color: white!important;
+    border: white solid 1px;
+    background-image: linear-gradient(to right, #3E1CB7, #D061DC);
+}
+.answer_hole{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+.answer_hole p{
+    line-height: 30px;
+    color: black;
+    margin-top: 30px;
+}
+.answer_hole input, select{
+    border: none;
+    border-bottom: #F9397F solid 2px;
+    text-align: center;
+    color: black;
+}
+.answer_hole select{
+    padding-bottom: 5px;
+}
+.answerSubmit{
+    color: white!important;
+    border: none!important;
+    background-image: linear-gradient(to right, #3E1CB7, #D061DC);
+    border-radius: 7px;
+    padding: 6px;
+    margin-bottom: 6px;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+}
+.answerSubmit:hover{
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+.mailSubmit{
+    width: 18em!important;
+}
+#loading {
+    width: 50px;
+    float: right;
+    margin-right: 13%;
+    margin-top: 20px;
+}
+.last{
+    margin-top: 0;
+}
+.last p{
+    position: relative;
+    left: 38px;
+}
+    ::-webkit-input-placeholder {
+        text-align: center;
+
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+        text-align: center;
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+        text-align: center;
+    }
+
+    :-ms-input-placeholder {
+        text-align: center;
+    }
+
+#conversation{
+    max-height: 65vh;
+    overflow: auto;
+    padding-bottom: 4em;
+}
+    /**** TINDER ****/
+
+#carte{
+    width: 20em;
+    height: 20em;
+    background-image: linear-gradient(#CCBF00,#F2AA00);
+    border-radius: 0.5em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*margin: auto;*/
+    margin-top: 3em;
+    -webkit-box-shadow: 0 0 28px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0 28px rgba(0, 0, 0, 0.20);
+}
+#carte p{
+    color: white;
+    font-size: 20px;
+    margin-top: 1rem;
+}
+#carte p:first-child{
+    font-size: 26px;
+}
+
+#nombre{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.line{
+    border-bottom: solid 2px white;
+    width: 50%;
+}
+
+#choices{
+    display: flex;
+    justify-content: center;
+
+    width: fit-content;
+    padding: 0.5em 1em;
+    border-radius: 11em;
+    margin: auto;
+
+}
+#choices img{
+    width: 5em;
+    height: 5em;
+    transition: 0.2s;
+}
+    #choices img:hover{
+        width: 5.3em;
+        height: 5.3em;
+        transition: 0.2s;
+    }
+#choices img:first-child{
+    margin-right: 1em;
+}
+#choices img:last-child{
+    margin-left: 1em;
+}
+#ajout{
+    text-align: center;
+}
+#tinderContain{
+    display: flex;
+    justify-content: space-around;
+}
+#idees, #liste{
+    margin-top: 5em;
+    width: 25%;
+}
+#idees{
+    height: 18em;
+}
+    #idees p, #liste p{
+        text-align: center;
+    }
+    #idees ul, #liste ul{
+        text-align: center;
+    }
+    #idees li, #liste li{
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .rose_violet {
+        background-image: linear-gradient(to left top, #8400E9, #E100E9) !important;
+    }
+    .vert_bleu{
+        background-image: linear-gradient(to left top, #005BC2, #00C2B5)!important;
+    }
+    .orange_rose {
+        background-image: linear-gradient(to left top, #DD4949, #DD49AC) !important;
+    }
+    .vert_vert{
+        background-image: linear-gradient(to left top, #49DD74, #49DDB1)!important;
+    }
+    .marron_marron{
+        background-image: linear-gradient(to left top, #632E00, #A94A00)!important;
+    }
+    .jaune_orange{
+        background-image: linear-gradient(to left top, #CCBF00,#F2AA00)!important;
+    }
+    .masquer{
+        display: none;
+    }
+
+    /*** Quand il ne reste qu'un seul parti ***/
+
+#infos{
+    margin-top: 3em;
+}
+.infosAfter{
+    justify-content: center!important;
+
+}
+.infosAfter #infos{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+}
+.infosAfter #infos p{
+    font-size: 1.6em!important;
+}
+    .infosAfter #infos a{
+        color: #3E1CB7;
+        border: #D061DC solid 1px;
+        border-radius: 7px;
+        padding: 8px;
+        margin-bottom: 6px;
+        padding-left: 1.3em;
+        padding-right: 1.3em;
+        width: fit-content;
+    }
+
+    .infosAfter #infos a:hover{
+        color: white!important;
+        border: white solid 1px;
+        background-image: linear-gradient(to right, #3E1CB7, #D061DC);
+    }
+    /*** FIN ***/
+
+    @media (max-height: 680px), screen and (orientation: portrait){
+        h1{
+            text-align: center;
+            margin-top: 3em;
+            margin-bottom: 2em;
+        }
+        #liste{
+            display: none;
+        }
+        #tinderContain {
+            flex-direction: column-reverse;
+        }
+        #carte{
+            margin: auto;
+            margin-top: 1em;
+        }
+        #idees {
+            width: 90%;
+            margin: auto;
+            margin-top: 2em;
+        }
+        #choices{
+            margin-bottom: 3em;
+            padding-bottom: 3em;
+        }
+        #idees{
+            height: auto;
+        }
+        #nombre{
+            margin-top: 10px;
+        }
+
+    }
